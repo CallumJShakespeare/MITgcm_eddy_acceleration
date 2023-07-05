@@ -1,0 +1,12 @@
+# from MOM
+# GM_background_K: 	isopycnal diffusion coefficien
+# GM_maxSlope:		max slope of isopycnals
+# GM_Scrit:		transition for scaling diffusion coefficient
+# GM_Sd:		half width scaling for diffusion coefficient
+# real background diff:	horizontal diffusion
+
+ &GM_PARM01
+ GM_isopycK=100.,
+ &
+
+

@@ -1,0 +1,6 @@
+# uses MITgcm_c65g
+# this code is set up for the tide-topo coupling problem
+# has "astronomical forcing" added to the momentum equations.
+#
+# added hz_diss (UDIAG3) and vert_diss (UDIAG4) calculation
+# these are up to multiplication by Ah, Av

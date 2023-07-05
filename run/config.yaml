@@ -1,0 +1,27 @@
+queue: normal
+# qsub_flags: -lother=hyperthread
+project: nm03
+walltime: 5:00:00
+ncpus: 1600
+mem: 3200GB
+jobname: t4G
+collate_walltime: 48:00:00
+collate_queue: normal
+collate_mem: 2GB
+# postscript: /home/157/ixr157/scripts/jobs/run_extract
+restart_history: 10
+model: mitgcm
+shortpath: /scratch/nm03/cjs157/mitgcm/
+exe: /g/data/nm03/cjs157/mitgcm/eddy1/bin/mitgcmuv_eddy1_diss_diag12
+qsub_flags: -W umask=027 
+
+# exe: mitgcmuv_880x520_8constit_128cpu
+input: /g/data/nm03/cjs157/mitgcm/eddy1/input_diss/
+
+runlog: true
+
+platform:
+ nodesize: 48
+
+ #manifest:
+ #fullhash: binhash

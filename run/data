@@ -1,0 +1,81 @@
+# ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+ tRef=0.0,
+ sRef=36.05,
+ viscA4=0.0,
+ viscAh=1.0E-2,
+ viscAz=2.0E-4,
+ viscC2Smag=0.0,
+ no_slip_sides=.FALSE.,
+ no_slip_bottom=.FALSE.,
+ diffK4T=0.0,
+ diffKhT=0.0E-2,
+ diffKzT=0.0E-4,
+ diffK4S=0.0,
+ diffKhS=0.0,
+ diffKzS=0.0,
+ f0=1.0E-4,
+ beta=0.E-11,
+ eosType='LINEAR',
+ tAlpha=2.43E-4,
+ sBeta =0.0,
+ rhoConst=1026.5,
+ rhoNil=1026.5,
+ implicitDiffusion=.FALSE.,
+ rigidLid=.FALSE.,
+ implicitFreeSurface=.TRUE.,
+ nonHydrostatic=.FALSE.,
+ staggerTimeStep=.TRUE.,
+ readBinaryPrec=64,
+ tempAdvScheme=30,
+ saltAdvScheme=30,
+ ! tidal/cori params
+ tidalForcingU=4.0E-6,
+ !tidalForcingV=0.0,
+ tidalFreq=1.4544E-4,
+ !meanForcingU=0.0,
+ !meanForcingV=0.0,
+ gravity=9.81,
+ hFacMin=0.1,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dMaxIters=300,
+ cg2dTargetResidual=1.E-13,
+ cg3dMaxIters=20,
+ cg3dTargetResidual=1.E-8,
+ &
+
+# Time stepping parameters
+ &PARM03
+ nIter0=0,
+! 30 day run, daily output
+ nTimeSteps=43200,
+ deltaT=60.0,
+ pChkptFreq=0.0,
+ chkptFreq=0.0,
+ dumpFreq=86400000.0,
+ monitorSelect=2,
+ monitorFreq=3600.,
+ &
+
+# Gridding parameters
+ &PARM04
+ usingCartesianGrid=.TRUE.,
+ dYspacing=500.5,
+ dXspacing=500.5,
+ delZ=200*10,
+ &
+
+# Input datasets
+ &PARM05
+ bathyFile='Goff_min5km_rms100.field',
+ hydrogThetaFile='tinit.field',
+ uVelInitFile='uinit_tide_plus_eddy_4.field',
+ vVelInitFile='vinit.field', 
+ &
